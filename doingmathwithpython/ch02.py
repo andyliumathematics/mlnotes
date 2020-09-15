@@ -9,5 +9,6 @@ plt.ylabel('y-coordinate')
 plt.title('Projectile motion of a ball')
 # plt.plot(range(30,72),np.linspace(237,78,num=72-30),'o')
 # %%
-np.linspace(237,78,num=72-30)*np.random.random_sample()
+import pandas as pd
+pd.DataFrame(np.linspace(237,78,num=72-30)*np.random.random_sample(),columns=['adsflk'])
 # %%
