@@ -33,3 +33,11 @@ data.merge(data,how='inner',on=['gender','age'])
 # %%
 data
 # %%
+ds = pd.read_csv(r"C:/Users/liulei/Desktop/train.csv")
+# %%
+ds
+# %%
+ds.to_hdf(r'C:/Users/liulei/Desktop/train.hdf','df')
+# %%
+pd.read_hdf(r'C:/Users/liulei/Desktop/train.hdf')
+# %%

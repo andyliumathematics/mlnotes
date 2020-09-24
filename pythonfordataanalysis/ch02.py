@@ -150,3 +150,20 @@ data
 g=data.groupby('company', as_index=False)['salary'].count()
 # %%
 g['company'].count()
+# %%
+company=["A","B","C"]
+data=pd.DataFrame({
+    "company":[company[x] for x in np.random.randint(0,len(company),10)],
+    "salary":np.random.randint(5,50,10),
+    "age":np.random.randint(15,50,10)
+}
+)
+# %%
+data['avg_salary'] = data.groupby('company')['salary'].transform('sum')
+# %%
+data
+# %%
+data.groupby('company')['salary'].mean().to_dict()
+# %%
+data['company'].map(data.groupby('company')['salary'].mean().to_dict())
+# %%
