@@ -167,3 +167,5 @@ data.groupby('company')['salary'].mean().to_dict()
 # %%
 data['company'].map(data.groupby('company')['salary'].mean().to_dict())
 # %%
+data[["height","weight","age"]].apply(np.sum, axis=0)
+# %%
