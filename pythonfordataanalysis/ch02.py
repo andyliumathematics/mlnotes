@@ -74,3 +74,79 @@ grouped = df['data1'].groupby(df['key1'])
 # %%
 grouped.mean()
 # %%
+import numpy as np
+
+data=['a','b','c','a','a','b']
+data1=np.array(data)
+#计算信息熵的方法
+def calc_ent(x):
+    """
+        calculate shanno ent of x
+    """
+
+    x_value_list = set([x[i] for i in range(x.shape[0])])
+    ent = 0.0
+    for x_value in x_value_list:
+        p = float(x[x == x_value].shape[0]) / x.shape[0]
+        logp = np.log2(p)
+        ent -= p * logp
+        print (ent)
+calc_ent(data1) 
+
+# %%
+import numpy as np
+data = np.array(['p','q','f','a','f','a','q','a','a','f','a'])
+# %%
+sdata = set(data)
+sdata
+# %%
+logmid = 0.0
+for i in sdata:
+    logmid-=np.log(len(data[data==i])/len(data))
+print(logmid/len(data))
+# %%
+import pandas as pd
+import numpy as np
+company=["A","B","C","X"]
+data=pd.DataFrame({
+    "company":[company[x] for x in np.random.randint(0,len(company),10)],
+    "salary":np.random.randint(5,50,10),
+    "age":np.random.randint(15,50,10)
+}
+)
+# %%
+data
+# %%
+group = data.groupby('company')
+# %%
+group
+# %%
+i = list(group)
+# %%
+i
+# %%
+i[0][1]
+# %%
+data.agg("sum")
+# %%
+r = group.agg({'salary':'median','age':'mean'})
+# %%
+type(r)
+# %%
+r
+# %%
+r['salary'].loc['A']
+# %%
+r.loc['A']['salary']
+# %%
+r.sort_values(by='company')
+# %%
+r
+# %%
+r.style
+# %%
+data
+# %%
+g=data.groupby('company', as_index=False)['salary'].count()
+# %%
+g['company'].count()
