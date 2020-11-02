@@ -119,3 +119,66 @@ del di[1]
 # %%
 di
 # %%
+import numpy as np
+# %%
+my_array = np.arange(1000000)
+my_list = list(range(1000000))
+# %%
+%time for _ in range(10):my_array *2
+# %%
+%time for _ in range(10):[x*2 for x in my_list]
+# %%
+
+# %%
+_
+# %%
+x = np.random.randn(2,3)
+# %%
+x
+# %%
+x*10
+# %%
+x**100000
+# %%
+x+x
+# %%
+x*x
+# %%
+x
+# %%
+type(x)
+# %%
+x.shape
+# %%
+x.dtype
+# %%
+len(32)
+# %%
+tp = (23,434,5,6,747,457,8,963,5)
+# %%
+aaa = np.array(tp)
+# %%
+aaareshape = aaa.reshape(3,3)
+# %%
+aaareshape
+# %%
+aaareshape.ndim
+# %%
+aaa.dtype
+# %%
+aaa = aaa**10
+# %%
+aaa
+# %%
+np.eye(10)
+# %%
+a64 =aaa.astype('int64')
+# %%
+a64
+# %%
+aaa
+# %%
+aaa.dtype
+# %%
+a64.dtype
+# %%
