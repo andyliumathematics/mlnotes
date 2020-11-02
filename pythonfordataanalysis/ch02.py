@@ -94,6 +94,7 @@ def calc_ent(x):
 calc_ent(data1) 
 
 # %%
+fadf
 import numpy as np
 data = np.array(['p','q','f','a','f','a','q','a','a','f','a'])
 # %%
@@ -104,7 +105,7 @@ logmid = 0.0
 for i in sdata:
     logmid-=np.log(len(data[data==i])/len(data))
 print(logmid/len(data))
-# %%
+# %%dfasd
 import pandas as pd
 import numpy as np
 company=["A","B","C","X"]
@@ -169,3 +170,74 @@ data['company'].map(data.groupby('company')['salary'].mean().to_dict())
 # %%
 data[["height","weight","age"]].apply(np.sum, axis=0)
 # %%
+[3,3,4]+[3,5,6]
+# %%
+b = ['saw', 'small', 'He', 'foxes', 'six']
+# %%
+b.sort(key=len)# %%
+
+# %%
+b
+
+# %%
+b.sort()
+# %%
+b
+# %%
+import bisect
+bisect.bisect(b,2)
+# %%
+list(zip([3,3,4],[3,5,6]))
+# %%
+hash([3,3,4])
+# %%
+a = {3,3,4}
+b={3,5,6}
+# %%
+a|b
+# %%
+{3,3,4}|{3,5,6}
+# %%
+import math
+math.log(3.17828,2)
+# %%
+math.log2(3.17828)
+# %%
+math.log1p(1)
+# %%
+math.log(2)
+# %%
+l=[]
+l.append([32])
+l[0]
+# %%
+l=[[1,2,3],[1,2,3]]
+# %%
+set(l)
+# %%
+import math
+0.5*math.log2(0.5)*2
+# %%
+
+import math
+0.3*math.log2(0.3)*3 +0.1*math.log2(0.1)
+# %%
+1*math.log2(1)
+# %%
+
+0.5*math.log(0.5)*2
+# %%
+import numpy as np
+import matplotlib.pyplot as plt
+np.random.seed(53)
+# %%
+np.ran
+# %%
+import numpy as np
+# %%
+data = {i:np.random.randn() for i in range(7)}
+# %%
+data
+# %%
+z
+
