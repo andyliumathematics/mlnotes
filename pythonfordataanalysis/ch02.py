@@ -239,5 +239,56 @@ data = {i:np.random.randn() for i in range(7)}
 # %%
 data
 # %%
-z
+import pandas as pd
+m = pd.Series({1:'2',3:4,5:6,"3":3})
 
+
+# %%
+m["3"]
+# %%
+m.dtype
+# %%
+pd.NaT
+# %%
+import numpy as np
+import matplotlib.pyplot as plt
+rg = np.arange(10)
+# %%
+rg
+# %%
+import seaborn as sn
+plt.plot(rg)
+# %%
+3+(4*33j)**2
+0x32# %%
+
+# %%
+import numpy as np
+np.sort ([1,8,3]+[4,5,6]).size()
+type([])
+# %%
+def findMedianSortedArrays( nums1, nums2):
+    numsnew = np.sort(nums1+nums2)
+    if(numsnew.size%2==1):
+        return numsnew[numsnew.size/2]+0.0
+    else:
+        return (numsnew[numsnew.size/2-1]+numsnew[numsnew.size/2])/2.0
+# %%
+type([])
+# %%
+x = np.ndarray([3,4,5])
+# %%
+x[1]
+# %%
+mm = np.ndarray([23,34,6,234]+[3,4,5])
+# %%
+mm = np.array([32,3,23,5,34])
+# %%
+mm
+# %%
+mm = np.sort([23,4,5,4]+[324,5,3,354,4])
+# %%
+mm.size/2
+# %%
+mm[int(mm.size/2)]
+# %%

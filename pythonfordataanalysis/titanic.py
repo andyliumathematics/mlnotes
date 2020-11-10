@@ -182,3 +182,19 @@ aaa.dtype
 # %%
 a64.dtype
 # %%
+list(range(8,112,4))
+# %%
+np.save("a",[3.4,6.5,4.4,3,34,54,56,7,33])
+# %%
+import pandas as pd
+# %%
+se = pd.Series(range(1100))
+# %%
+se.index
+# %%
+type(se.values)
+# %%
+seindex = pd.Series([3,4,5,6,7],index=('3','4,','5','242','asdfa'))
+# %%
+seindex
+# %%
