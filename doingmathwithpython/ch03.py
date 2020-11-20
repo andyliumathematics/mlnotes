@@ -10,6 +10,8 @@ l.sort()
 # %%
 l
 # %%
+
+# %%
 l.most_common(1)
 # %%
 '''
@@ -23,4 +25,6 @@ print(c.most_common(1))
 print(c.most_common(2))
 # %%
 c.most_common()[0]
+# %%
+print(33)
 # %%

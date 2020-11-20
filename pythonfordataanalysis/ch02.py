@@ -292,3 +292,84 @@ mm.size/2
 # %%
 mm[int(mm.size/2)]
 # %%
+from typing import List
+
+
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+
+class Solution:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        # 遍历的遍历器
+        l1temp = l1
+        l2temp = l2
+        result = None
+        iteratori = None
+        i10 = 0
+        while(l1temp!=None):
+            if(iteratori == None):
+                iteratori = ListNode(int((l1temp.val +l2temp.val +i10)%10))
+                result = iteratori
+            else:
+                iteratori.next = ListNode(int((l1temp.val +l2temp.val +i10)%10))
+                iteratori = iteratori.next
+            i10 = int((l1temp.val+l2temp.val+i10)/10)
+            l1temp= l1temp.next
+            l2temp= l2temp.next
+        if(i10>0):
+            iteratori.next = ListNode(i10)
+            
+        return result
+
+
+if __name__ == "__main__":
+    l1 = ListNode(2)
+    l1.next = ListNode(4)
+    l1.next.next = ListNode(3)
+    l2 = ListNode(5)
+    l2.next = ListNode(6)
+    l2.next.next = ListNode(4)
+    s = Solution()
+    x = s.addTwoNumbers(l1,l2)
+    print(x)
+# %%
+m={}
+m['a']
+# %%
+m.get('a') == None
+# %%
+from sympy import Symbol,solve
+x = Symbol('x')
+expr = x -5-6
+solve(expr)
+# %%
+expr
+# %%
+expr = x**2 +x*6 -5
+solve(expr,dict = True)
+# %%
+from sympy.plotting import plot 
+from sympy import Symbol
+x = Symbol('x')
+expr = x*x*3+x*20-8
+plot(expr)
+# %%
+from sympy import FiniteSet
+members = [1, 2, 3]
+s = FiniteSet(*members)
+# %%
+s
+# %%
+x
+# %%
+from sympy import diff
+# %%
+diff(x**3+8*x**2-44*x+83)
+# %%
+from sympy import integrate
+y = Symbol('y')
+integrate(3*y*x**3+8*x**2-44*x+83, (x, 1, 2)(y,4,5))
+# %%
